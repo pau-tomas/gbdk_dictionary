@@ -378,23 +378,11 @@
             "autoFadeSpeed": 1,
             "id": "ef3c254a-094a-437d-965a-dbf042004c40",
             "symbol": "scene_1",
-            "x": 88,
-            "y": 32,
+            "x": 112,
+            "y": 48,
             "actors": [],
             "triggers": [],
             "script": [
-                {
-                    "command": "EVENT_SET_VALUE",
-                    "args": {
-                        "variable": "0",
-                        "value": {
-                            "type": "number",
-                            "value": 0
-                        },
-                        "__collapse": true
-                    },
-                    "id": "23f4d8de-8e99-4d0a-a593-36ebb463f909"
-                },
                 {
                     "command": "EVENT_SET_VALUE",
                     "args": {
@@ -2819,7 +2807,7 @@
                         ],
                         "override": true,
                         "__scriptTabs": "press",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -2891,7 +2879,7 @@
                                                     }
                                                 },
                                                 "__collapseElse": false,
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "children": {
                                                 "true": [
@@ -3531,62 +3519,13 @@
                                                         "id": "b4d34466-ee10-48bb-ad29-5ed74b7b05f3"
                                                     },
                                                     {
-                                                        "command": "EVENT_COMMENT",
+                                                        "command": "PT_EVENT_IF_WORD_IS_VALID",
                                                         "args": {
-                                                            "text": "Call function in C",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "f1c0a5b7-603f-4ed4-a217-02bae77516d3"
-                                                    },
-                                                    {
-                                                        "command": "EVENT_GBVM_SCRIPT",
-                                                        "args": {
-                                                            "script": "VM_CALL_NATIVE b_isThisAWord, _isThisAWord",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "9680622d-5e4b-43a4-a1d3-f811369ec06c"
-                                                    },
-                                                    {
-                                                        "command": "EVENT_IDLE",
-                                                        "args": {
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "1b0009a4-1d93-449d-b2ba-6e764ae5d37f"
-                                                    },
-                                                    {
-                                                        "command": "EVENT_COMMENT",
-                                                        "args": {
-                                                            "text": "Check result",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "f5e578f4-6bc8-4704-a9f7-c6c64a4ff8b4"
-                                                    },
-                                                    {
-                                                        "command": "EVENT_IF",
-                                                        "args": {
-                                                            "condition": {
-                                                                "type": "eq",
-                                                                "valueA": {
-                                                                    "type": "variable",
-                                                                    "value": "0"
-                                                                },
-                                                                "valueB": {
-                                                                    "type": "number",
-                                                                    "value": 1
-                                                                }
-                                                            },
-                                                            "__collapseElse": false
+                                                            "__collapseElse": false,
+                                                            "__collapse": false
                                                         },
                                                         "children": {
                                                             "true": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Valid word!",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "2bc3c47b-363a-448b-9ce4-37a2219a7925"
-                                                                },
                                                                 {
                                                                     "command": "EVENT_TEXT",
                                                                     "args": {
@@ -3596,18 +3535,10 @@
                                                                         "avatarId": "",
                                                                         "__collapse": true
                                                                     },
-                                                                    "id": "4adc2b7e-9bf7-4ce1-bff0-44d49c675386"
+                                                                    "id": "5fdf8462-32e8-4cf8-9585-9a4fa1e3b8e4"
                                                                 }
                                                             ],
                                                             "false": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Not a word",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "34f1bd3a-adf0-4050-b478-e7397eaa8882"
-                                                                },
                                                                 {
                                                                     "command": "EVENT_TEXT",
                                                                     "args": {
@@ -3617,11 +3548,11 @@
                                                                         "avatarId": "",
                                                                         "__collapse": true
                                                                     },
-                                                                    "id": "98f99d66-3fc4-41ab-831d-d11049249202"
+                                                                    "id": "599ffbf3-a505-4284-be7c-b7c29b8b2fca"
                                                                 }
                                                             ]
                                                         },
-                                                        "id": "8660ea5d-b34e-4149-b8a7-b9b02f0fc234"
+                                                        "id": "2c2075a5-fee5-493c-95a4-bedc349691c3"
                                                     }
                                                 ]
                                             },
@@ -3643,7 +3574,7 @@
                         ],
                         "override": true,
                         "__scriptTabs": "press",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -4029,7 +3960,7 @@
                         ],
                         "override": true,
                         "__scriptTabs": "press",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -4096,63 +4027,13 @@
                                 "id": "f90934f8-2197-49cd-85c9-99c41b74dad2"
                             },
                             {
-                                "command": "EVENT_COMMENT",
+                                "command": "PT_EVENT_IF_WORD_IS_VALID",
                                 "args": {
-                                    "text": "Call function in C",
-                                    "__collapse": true
-                                },
-                                "id": "79938141-4ee0-4e47-bb2d-e713b9c9d59a"
-                            },
-                            {
-                                "command": "EVENT_GBVM_SCRIPT",
-                                "args": {
-                                    "script": "VM_CALL_NATIVE b_isThisAWord, _isThisAWord",
-                                    "__collapse": true
-                                },
-                                "id": "f77a9a4e-6f46-4fc6-b02e-6cc8cf7f7acc"
-                            },
-                            {
-                                "command": "EVENT_IDLE",
-                                "args": {
-                                    "__collapse": true
-                                },
-                                "id": "d7b86d4b-80ba-4d1c-9157-f3821b549ea9"
-                            },
-                            {
-                                "command": "EVENT_COMMENT",
-                                "args": {
-                                    "text": "Check result",
-                                    "__collapse": true
-                                },
-                                "id": "afae7d66-526d-4c00-83cb-a9efc11caa0a"
-                            },
-                            {
-                                "command": "EVENT_IF",
-                                "args": {
-                                    "condition": {
-                                        "type": "eq",
-                                        "valueA": {
-                                            "type": "variable",
-                                            "value": "0"
-                                        },
-                                        "valueB": {
-                                            "type": "number",
-                                            "value": 1
-                                        }
-                                    },
                                     "__collapseElse": false,
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
-                                        {
-                                            "command": "EVENT_COMMENT",
-                                            "args": {
-                                                "text": "Valid word!",
-                                                "__collapse": true
-                                            },
-                                            "id": "808491f3-0a66-4521-9342-0b356c4468d2"
-                                        },
                                         {
                                             "command": "EVENT_TEXT",
                                             "args": {
@@ -4162,18 +4043,10 @@
                                                 "avatarId": "",
                                                 "__collapse": true
                                             },
-                                            "id": "e2ff3d10-64ba-4c8a-bf9b-bcf32592a833"
+                                            "id": "41eeb597-5cfa-43e3-929b-da48439de5d8"
                                         }
                                     ],
                                     "false": [
-                                        {
-                                            "command": "EVENT_COMMENT",
-                                            "args": {
-                                                "text": "Not a word",
-                                                "__collapse": true
-                                            },
-                                            "id": "d2be2b7f-09cb-40c3-aa33-23bcfe0127cd"
-                                        },
                                         {
                                             "command": "EVENT_TEXT",
                                             "args": {
@@ -4183,11 +4056,11 @@
                                                 "avatarId": "",
                                                 "__collapse": true
                                             },
-                                            "id": "31429f18-8b7a-4f2d-b6f6-cd4e7db0f343"
+                                            "id": "242b0ef7-792d-4566-8fdc-4c31562ec7cf"
                                         }
                                     ]
                                 },
-                                "id": "73bcd2d2-1b28-40de-b5e8-d56c91512dfe"
+                                "id": "16d98fcb-ae36-42e4-98c6-89357d44d2c0"
                             }
                         ]
                     },
@@ -4426,7 +4299,8 @@
                             "type": "variable",
                             "value": "11"
                         },
-                        "__collapse": true
+                        "__collapse": true,
+                        "__comment": false
                     },
                     "id": "8c954bdb-9021-4055-95dd-d97662480cb1"
                 },
@@ -4725,7 +4599,7 @@
                         "__collapseCase15": false,
                         "value15": 15,
                         "__collapseElse": false,
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true0": [
@@ -5746,7 +5620,7 @@
                                     "value8": 24,
                                     "__collapseCase9": false,
                                     "value9": 25,
-                                    "__collapseCase10": false,
+                                    "__collapseCase10": true,
                                     "value10": 26,
                                     "__collapseCase11": false,
                                     "value11": 11,
@@ -6875,11 +6749,6 @@
     ],
     "variables": [
         {
-            "id": "0",
-            "name": "IsThisAWord",
-            "symbol": "var_isthisaword"
-        },
-        {
             "id": "1",
             "name": "SelectedNumber",
             "symbol": "var_selectednumber"
@@ -6979,7 +6848,7 @@
         "showCollisionExtraTiles": false,
         "worldScrollX": 0,
         "worldScrollY": 0,
-        "zoom": 200,
+        "zoom": 177.59476345777512,
         "sgbEnabled": false,
         "customHead": "",
         "defaultBackgroundPaletteIds": [
@@ -7065,7 +6934,7 @@
             "Shift"
         ],
         "debuggerEnabled": true,
-        "debuggerScriptType": "editor",
+        "debuggerScriptType": "gbvm",
         "debuggerVariablesFilter": "all",
         "debuggerCollapsedPanes": [],
         "debuggerPauseOnScriptChanged": false,
