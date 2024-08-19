@@ -2819,7 +2819,7 @@
                         ],
                         "override": true,
                         "__scriptTabs": "press",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -4578,7 +4578,7 @@
                         "value15": 16,
                         "__collapseElse": false,
                         "__disableElse": true,
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true0": [
@@ -4725,7 +4725,7 @@
                         "__collapseCase15": false,
                         "value15": 15,
                         "__collapseElse": false,
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true0": [
@@ -6978,7 +6978,7 @@
         "showCollisionSlopeTiles": false,
         "showCollisionExtraTiles": false,
         "worldScrollX": 0,
-        "worldScrollY": 9.5,
+        "worldScrollY": 0,
         "zoom": 200,
         "sgbEnabled": false,
         "customHead": "",
