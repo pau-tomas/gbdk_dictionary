@@ -1,16 +1,18 @@
 #pragma bank 255
 
 #include "vm_gameboy.h"
-#include "game_globals.h"
+#include "data/game_globals.h"
 #include "dict_lookup.h"
 #include "string.h"
 
 uint8_t selectedLetters[6];
 
-void isThisAWord(void) OLDCALL BANKED {
+void isThisAWord(SCRIPT_CTX *THIS) OLDCALL BANKED {
+
+    INT16 *is_this_a_word = VM_REF_TO_PTR(FN_ARG0);
 
     // reset the check
-    *(script_memory + VAR_ISTHISAWORD) = 0;
+    *is_this_a_word = 0;
 
     // populate a local array with the selected letter indexes
     uint8_t count;
@@ -125,5 +127,5 @@ void isThisAWord(void) OLDCALL BANKED {
     }
 
     // do the check and assign the result (1 or 0)
-    *(script_memory + VAR_ISTHISAWORD) = dict_check_word(wordToCheck);
+    *is_this_a_word = dict_check_word(wordToCheck);
 }
